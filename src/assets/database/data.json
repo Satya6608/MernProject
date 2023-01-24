@@ -1,0 +1,367 @@
+{
+  "maincategory": [
+    {
+      "id": 0,
+      "name": "Test"
+    },
+    {
+      "name": "Male",
+      "id": 1
+    },
+    {
+      "name": "Female",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Kids"
+    }
+  ],
+  "subcategory": [
+    {
+      "id": 0,
+      "name": "Test"
+    },
+    {
+      "name": "Jeans",
+      "id": 1
+    },
+    {
+      "name": "Shirt",
+      "id": 2
+    },
+    {
+      "name": "Tshirt",
+      "id": 3
+    },
+    {
+      "name": "Trouser",
+      "id": 4
+    }
+  ],
+  "brand": [
+    {
+      "id": 0,
+      "name": "Test"
+    },
+    {
+      "name": "Adidas",
+      "id": 1
+    },
+    {
+      "name": "Mufti",
+      "id": 2
+    },
+    {
+      "name": "Polo",
+      "id": 3
+    },
+    {
+      "name": "Gucci",
+      "id": 4
+    },
+    {
+      "name": "Zara",
+      "id": 5
+    },
+    {
+      "name": "Nike",
+      "id": 6
+    },
+    {
+      "name": "Tommy Filfiger",
+      "id": 7
+    }
+  ],
+  "product": [
+    {
+      "id": 0,
+      "name": "Male Tshirt Polo",
+      "maincategory": "Male",
+      "subcategory": "Tshirt",
+      "brand": "Polo",
+      "color": "White",
+      "size": "M",
+      "baseprice": "7890",
+      "discount": "78",
+      "finalprice": 1735,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p15.jpg",
+      "pic2": "p29.jpg",
+      "pic3": "p34.jpg",
+      "pic4": "p2.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Male Jeans Slim Fit Mufti",
+      "maincategory": "Male",
+      "subcategory": "Jeans",
+      "brand": "Mufti",
+      "color": "Blue",
+      "size": "36",
+      "baseprice": "5000",
+      "discount": "75",
+      "finalprice": 1250,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p5.jpg",
+      "pic2": "p2.jpg",
+      "pic3": "p1.jpg",
+      "pic4": "p7.jpg"
+    },
+    {
+      "name": "Female Jeans Regular Fit Mufti",
+      "maincategory": "Female",
+      "subcategory": "Jeans",
+      "brand": "Mufti",
+      "color": "Black",
+      "size": "32",
+      "baseprice": "8500",
+      "discount": "55",
+      "finalprice": 3825,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p12.jpg",
+      "pic2": "p19.jpg",
+      "pic3": "p22.jpg",
+      "pic4": "p53.jpg",
+      "id": 2
+    },
+    {
+      "name": "Kids Jeans Tommy Hilfiger",
+      "maincategory": "Kids",
+      "subcategory": "Jeans",
+      "brand": "Tommy Filfiger",
+      "color": "Black",
+      "size": "26",
+      "baseprice": "4500",
+      "discount": "45",
+      "finalprice": 2475,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p64.jpg",
+      "pic2": "p42.jpg",
+      "pic3": "p62.jpg",
+      "pic4": "p67.jpg",
+      "id": 3
+    },
+    {
+      "name": "Female Tshirt Adidas",
+      "maincategory": "Female",
+      "subcategory": "Tshirt",
+      "brand": "Adidas",
+      "color": "White",
+      "size": "M",
+      "baseprice": "4560",
+      "discount": "25",
+      "finalprice": 3420,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p28.jpg",
+      "pic2": "p23.jpg",
+      "pic3": "p39.jpg",
+      "pic4": "p9.jpg",
+      "id": 4
+    },
+    {
+      "name": "Kids Tshirt Mufti",
+      "maincategory": "Kids",
+      "subcategory": "Tshirt",
+      "brand": "Mufti",
+      "color": "Blue",
+      "size": "SM",
+      "baseprice": "5800",
+      "discount": "58",
+      "finalprice": 2436,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p59.jpg",
+      "pic2": "p58.jpg",
+      "pic3": "p60.jpg",
+      "pic4": "p61.jpg",
+      "id": 5
+    },
+    {
+      "name": "Male Jeans Mufti",
+      "maincategory": "Male",
+      "subcategory": "Jeans",
+      "brand": "Mufti",
+      "color": "Blue",
+      "size": "34",
+      "baseprice": "4560",
+      "discount": "45",
+      "finalprice": 2508,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p44.jpg",
+      "pic2": "p5.jpg",
+      "pic3": "p11.jpg",
+      "pic4": "p15.jpg",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Female Shirt White Zara",
+      "maincategory": "Female",
+      "subcategory": "Shirt",
+      "brand": "Zara",
+      "color": "White",
+      "size": "XL",
+      "baseprice": "5870",
+      "discount": "84",
+      "finalprice": 939,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p9.jpg",
+      "pic2": "p6.jpg",
+      "pic3": "p74.jpg",
+      "pic4": "p70.jpg"
+    },
+    {
+      "name": "Female Trouser Black",
+      "maincategory": "Female",
+      "subcategory": "Trouser",
+      "brand": "Gucci",
+      "color": "Black",
+      "size": "32",
+      "baseprice": "1545",
+      "discount": "14",
+      "finalprice": 1328.7,
+      "stock": "In Stock",
+      "description": "This is a Sample Product",
+      "pic1": "p70.jpg",
+      "pic2": "p74.jpg",
+      "pic3": "p72.jpg",
+      "pic4": "p71.jpg",
+      "id": 8
+    }
+  ],
+  "user": [
+    {
+      "id": 0,
+      "name": "Test",
+      "username": "Test",
+      "email": "Test",
+      "phone": "Test",
+      "addressline1": "Test",
+      "addressline2": "Test",
+      "addressline3": "Test",
+      "pin": "Test",
+      "city": "Test",
+      "state": "Test",
+      "pic": "Test",
+      "role": "User",
+      "otp": ""
+    },
+    {
+      "name": "Nitin Chauhan",
+      "username": "nitin",
+      "email": "vishankchauhan@gmail.com",
+      "phone": "9873848046",
+      "password": "Nitin@123",
+      "addressline1": "",
+      "addressline2": "",
+      "addressline3": "",
+      "pin": "",
+      "city": "",
+      "state": "",
+      "pic": "",
+      "role": "User",
+      "otp": "",
+      "id": 1
+    },
+    {
+      "name": "Vishank Chauhan",
+      "username": "vishank",
+      "email": "vishankchauhan2@gmail.com",
+      "phone": "9873848046",
+      "password": "Vishank@123",
+      "addressline1": "",
+      "addressline2": "",
+      "addressline3": "",
+      "pin": "",
+      "city": "",
+      "state": "",
+      "pic": "",
+      "role": "Admin",
+      "otp": "",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Satya Prakash",
+      "username": "Satya",
+      "email": "satyaprakash6608@gmail.com",
+      "phone": "08076419914",
+      "password": "Satya",
+      "addressline1": "226  ",
+      "addressline2": "gali no 3",
+      "addressline3": "mandawali",
+      "pin": "110092",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pic": "p3.jpg",
+      "role": "User",
+      "otp": ""
+    }
+  ],
+  "cart": [
+    {
+      "id": 0,
+      "userid": "Test",
+      "productid": "Test",
+      "name": "Test",
+      "color": "Test",
+      "size": "Test",
+      "price": 0,
+      "qty": 0,
+      "total": 0,
+      "pic": "Test"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 0,
+      "userid": "Test",
+      "productid": "Test",
+      "name": "Test",
+      "color": "Test",
+      "size": "Test",
+      "price": "Test",
+      "pic": "Test"
+    }
+  ],
+  "checkout": [
+    {
+      "id": 0,
+      "userid": "Test",
+      "paymentmode": "Test",
+      "orderstatus": "Test",
+      "paymentstatus": "Test",
+      "totalamount": 0,
+      "shippingamount": 0,
+      "finalamount": 0,
+      "date": "Test",
+      "products": []
+    }
+  ],
+  "newslatter": [
+    {
+      "id": 0,
+      "email": "Test"
+    }
+  ],
+  "contact": [
+    {
+      "id": 0,
+      "name": "Test",
+      "email": "Test",
+      "phone": "Test",
+      "subject": "Test",
+      "message": "Test",
+      "date": "Test",
+      "status": "Active"
+    }
+  ]
+}
