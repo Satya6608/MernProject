@@ -1,17 +1,30 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import LightGallery from 'lightgallery/react';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
 
 import { getProduct } from "../Store/ActionCreators/ProductActionCreators"
 export default function SingleProduct() {
-    var [qty,setqty] = useState(1)
+    var [p, setP] = useState({})
+    var [qty, setqty] = useState(1)
     var product = useSelector((state) => state.ProductStateData)
     var dispatch = useDispatch()
     var { id } = useParams()
-    product = product.find((item)=>item.id==id)
+    const onInit = () => {
+        console.log('lightGallery has been initialized');
+    };
     useEffect(() => {
-        dispatch(getProduct({ id: id }))
-    }, [])
+        dispatch(getProduct())
+        var data = product.find((item) => item.id === Number(id))
+        if (data) {
+            setP(data)
+        }
+    }, [product.length])
     return (
         <>
             <div className="container-fluid py-5">
@@ -19,19 +32,26 @@ export default function SingleProduct() {
                     <div className="col-lg-5 pb-5">
                         <div id="product-carousel" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner border">
-                                <div className="carousel-item active">
-                                    {product.pic1 ? <a href={`/assets/productimages/${product.pic1}`} target="_blank"><img className="w-100" src={`/assets/productimages/${product.pic1}`} height="500px" alt="Image" /></a> : ""}
-                                </div>
-                                <div className="carousel-item">
-                                    {product.pic2 ? <a href={`/assets/productimages/${product.pic2}`} target="_blank"><img className="w-100" src={`/assets/productimages/${product.pic2}`} height="500px" alt="Image" /></a> : ""}
-                                </div>
-                                <div className="carousel-item">
-                                    {product.pic3 ? <a href={`/assets/productimages/${product.pic3}`} target="_blank"><img className="w-100" src={`/assets/productimages/${product.pic3}`} height="500px" alt="Image" /></a> : ""}
-                                </div>
-                                <div className="carousel-item">
-                                    {product.pic4 ? <a href={`/assets/productimages/${product.pic4}`} target="_blank"><img className="w-100" src={`/assets/productimages/${product.pic4}`} height="500px" alt="Image" /></a> : ""}
-                                </div>
+                                <LightGallery
+                                    onInit={onInit}
+                                    speed={500}
+                                    plugins={[lgThumbnail, lgZoom]}
+                                >
+                                    <div className="carousel-item active">
+                                        {p.pic1 ? <a data-src={`/assets/productimages/${p.pic1}`} > <img className="w-100" src={`/assets/productimages/${p.pic1}`} height="500px" alt="Image" /> </a>: ""}
+                                    </div>
+                                    <div className="carousel-item">
+                                        {p.pic2 ? <a data-src={`/assets/productimages/${p.pic2}`} > <img className="w-100" src={`/assets/productimages/${p.pic2}`} data-src={`/assets/productimages/${p.pic2}`} height="500px" alt="Image" /></a> : ""}
+                                    </div>
+                                    <div className="carousel-item">
+                                        {p.pic3 ? <a data-src={`/assets/productimages/${p.pic3}`} > <img className="w-100" src={`/assets/productimages/${p.pic3}`} data-src={`/assets/productimages/${p.pic3}`} height="500px" alt="Image" /></a> : ""}
+                                    </div>
+                                    <div className="carousel-item">
+                                        {p.pic4 ? <a data-src={`/assets/productimages/${p.pic4}`} > <img className="w-100" src={`/assets/productimages/${p.pic4}`} data-src={`/assets/productimages/${p.pic4}`} height="500px" alt="Image" /></a> : ""}
+                                    </div>
+                                </LightGallery>
                             </div>
+
                             <a className="carousel-control-prev" href="#product-carousel" data-slide="prev">
                                 <i className="fa fa-2x fa-angle-left text-dark"></i>
                             </a>
@@ -45,55 +65,55 @@ export default function SingleProduct() {
                         <table className='table table-bordered'>
                             <tbody>
                                 <tr>
-                                    <th colSpan={2} className="text-center">{product.name}</th>
+                                    <th colSpan={2} className="text-center">{p.name}</th>
                                 </tr>
                                 <tr>
                                     <th>Categorory</th>
-                                    <td>{product.maincategory}/{product.subcategory}</td>
+                                    <td>{p.maincategory}/{p.subcategory}</td>
                                 </tr>
                                 <tr>
                                     <th>Brand</th>
-                                    <td>{product.brand}</td>
+                                    <td>{p.brand}</td>
                                 </tr>
                                 <tr>
                                     <th>COlor</th>
-                                    <td>{product.color}</td>
+                                    <td>{p.color}</td>
                                 </tr>
                                 <tr>
                                     <th>Size</th>
-                                    <td>{product.size}</td>
+                                    <td>{p.size}</td>
                                 </tr>
                                 <tr>
                                     <th>Price</th>
-                                    <td><del>&#8377;{product.baseprice}</del><sup>&#8377;{product.finalprice}</sup></td>
+                                    <td><del>&#8377;{p.baseprice}</del><sup>&#8377;{p.finalprice}</sup></td>
                                 </tr>
                                 <tr>
                                     <th>Discount</th>
-                                    <td>{product.discount}% Off</td>
-                                </tr>                                
+                                    <td>{p.discount}% Off</td>
+                                </tr>
                                 <tr>
                                     <th>Stock</th>
-                                    <td>{product.stock}</td>
+                                    <td>{p.stock}</td>
                                 </tr>
                                 <tr>
                                     <th>Description</th>
-                                    <td>{product.description}</td>
+                                    <td>{p.description}</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div className="d-flex align-items-center mb-4 pt-2">
                             <div className="input-group quantity mr-3" style={{ width: "130px" }}>
                                 <div className="input-group-btn">
-                                    <button className="btn btn-primary btn-minus" onClick={()=>{
-                                            if(qty>1)
-                                            setqty(qty-1)
-                                        }}>
+                                    <button className="btn btn-primary btn-minus" onClick={() => {
+                                        if (qty > 1)
+                                            setqty(qty - 1)
+                                    }}>
                                         <i className="fa fa-minus"></i>
                                     </button>
                                 </div>
-                                <input type="text" className="form-control bg-secondary text-center" onChange={()=>{}} value={qty} />
+                                <input type="text" className="form-control bg-secondary text-center" onChange={() => { }} value={qty} />
                                 <div className="input-group-btn">
-                                    <button className="btn btn-primary btn-plus" onClick={()=>setqty(qty+1)}>
+                                    <button className="btn btn-primary btn-plus" onClick={() => setqty(qty + 1)}>
                                         <i className="fa fa-plus"></i>
                                     </button>
                                 </div>

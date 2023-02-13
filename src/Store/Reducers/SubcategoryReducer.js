@@ -14,7 +14,7 @@ export default function SubcategoryReducer(state=[],action){
     
         case UPDATE_SUBCATEGORY_REDUCER:
             var index = state.findIndex((item)=>item.id===action.data.id)
-            state[index]=action.data.name 
+            state[index]=action.data
             return state
         default:
             return state

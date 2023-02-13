@@ -22,7 +22,7 @@ export default function Shop() {
     product.reverse()
     function check(mc, sc, br) {
         var p = []
-        if (mc === "All" && sc == "All" && br === "All")
+        if (mc === "All" && sc === "All" && br === "All")
             p = product
         else if (mc !== "All" && sc === "All" && br === "All")
             p = product.filter((item) => item.maincategory === mc)
@@ -67,7 +67,6 @@ export default function Shop() {
             setshopproducts(p)
         }
         else {
-            var p = product
             p.sort((a, b) => a.finalprice - b.finalprice)
             setshopproducts(p)
         }
@@ -105,7 +104,7 @@ export default function Shop() {
         setshopproducts(product)
         else
         setshopproducts(product.filter((item)=>item.maincategory===maincat))
-    }, [])
+    }, [product.length])
     return (
         <>
             <div className="container-fluid pt-1">

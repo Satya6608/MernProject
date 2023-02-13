@@ -17,7 +17,7 @@ export default function ProductReducer(state=[],action){
     
         case UPDATE_PRODUCT_REDUCER:
             var index = state.findIndex((item)=>item.id===action.data.id)
-            state[index]=action.data.name 
+            state[index]=action.data 
             return state
         default:
             return state

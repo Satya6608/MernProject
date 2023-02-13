@@ -17,7 +17,7 @@ export default function Profile() {
   }
   useEffect(() => {
     getAPIData()
-  }, [])
+  }, [users.length])
   return (
     <>
       <div className="containr-fluid">
@@ -25,7 +25,7 @@ export default function Profile() {
           <div className="col-md-6">
             {
               user.pic?
-              <img src={`/assets/productimages/${user.pic}`} alt="" />:
+              <img src={`/assets/productimages/${user.pic}`} width="100%" height="550px"  alt="" />:
               <img src={`/assets/img/noimage.jpg`} width="100%" height="550px" alt="" />
             }
           </div>
