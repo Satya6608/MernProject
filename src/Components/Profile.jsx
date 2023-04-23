@@ -17,7 +17,7 @@ export default function Profile() {
   }
   useEffect(() => {
     getAPIData()
-  }, [users.length])
+  }, [users])
   return (
     <>
       <div className="containr-fluid">
@@ -58,7 +58,7 @@ export default function Profile() {
                 </tr>
                 <tr>
                   <th>Address Line3</th>
-                  <td>{user.addressline4}</td>
+                  <td>{user.addressline3}</td>
                 </tr>
                 <tr>
                   <th>Pin</th>

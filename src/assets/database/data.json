@@ -41,24 +41,12 @@
   ],
   "brand": [
     {
-      "id": 0,
-      "name": "Test"
-    },
-    {
       "name": "Adidas",
       "id": 1
     },
     {
-      "name": "Mufti",
-      "id": 2
-    },
-    {
       "name": "Polo",
       "id": 3
-    },
-    {
-      "name": "Gucci",
-      "id": 4
     },
     {
       "name": "Zara",
@@ -71,6 +59,18 @@
     {
       "name": "Tommy Filfiger",
       "id": 7
+    },
+    {
+      "name": "levi's",
+      "id": 8
+    },
+    {
+      "name": "Peter England",
+      "id": 9
+    },
+    {
+      "name": "U.S Polo Assign",
+      "id": 10
     }
   ],
   "product": [
@@ -293,15 +293,15 @@
       "name": "Satya Prakash",
       "username": "Satya",
       "email": "satyaprakash6608@gmail.com",
-      "phone": "08076419914",
+      "phone": "8076419914",
       "password": "Satya",
-      "addressline1": "226  ",
-      "addressline2": "gali no 3",
-      "addressline3": "mandawali",
-      "pin": "110092",
+      "addressline1": "2223",
+      "addressline2": "gali no 2",
+      "addressline3": "mandawali new delhi",
+      "pin": "110099",
       "city": "Delhi",
       "state": "Delhi",
-      "pic": "p4.jpg",
+      "pic": "user.png",
       "role": "User",
       "otp": ""
     }
