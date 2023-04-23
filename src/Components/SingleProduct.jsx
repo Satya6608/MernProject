@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+
 import LightGallery from 'lightgallery/react';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -8,18 +9,69 @@ import 'lightgallery/css/lg-thumbnail.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-import { getProduct } from "../Store/ActionCreators/ProductActionCreators"
+
+import { getProduct } from '../Store/ActionCreators/ProductActionCreators';
+import { getCart, addCart } from "../Store/ActionCreators/CartActionCreators";
+import { getWishlist, addWishlist } from "../Store/ActionCreators/WishlistActionCreators"
+
+import { ImportExportOutlined } from '@mui/icons-material';
 export default function SingleProduct() {
     var [p, setP] = useState({})
     var [qty, setqty] = useState(1)
     var product = useSelector((state) => state.ProductStateData)
+    var cart = useSelector((state) => state.CartStateData)
+    var wishlist = useSelector((state) => state.WishlistStateData)
     var dispatch = useDispatch()
     var { id } = useParams()
+    var navigate = useNavigate()
+    function addToCart(){
+        var data = cart.find((item)=>item.productid===Number(id) && item.userid===localStorage.getItem("userid"));
+        if(data){
+            navigate("/cart")
+        }
+        else{
+            var item = {
+                userid :localStorage.getItem('userid'),
+                productid : p.id,
+                name : p.name,
+                color : p.color,
+                size : p.size,
+                price : p.price,
+                qty : p.qty,
+                total : p.finalprice*qty,
+                pic : p.pic1,
+            }
+            dispatch(addCart(item))
+            navigate("/cart")
+        }
+    }
+    function addToWishlist(){
+        var data = wishlist.find((item)=>item.productid===Number(id) && item.userid===localStorage.getItem("userid"));
+        if(data){
+            navigate("/profile")
+        }
+        else{
+            var item = {
+                userid :localStorage.getItem('userid'),
+                productid : p.id,
+                name : p.name,
+                color : p.color,
+                size : p.size,
+                price : p.price,
+                pic : p.pic1,
+            }
+            dispatch(addWishlist(item))
+            navigate("/profile")
+        }
+        
+    }
     const onInit = () => {
         console.log('lightGallery has been initialized');
     };
     useEffect(() => {
         dispatch(getProduct())
+        dispatch(getCart())
+        dispatch(getWishlist())
         var data = product.find((item) => item.id === Number(id))
         if (data) {
             setP(data)
@@ -118,8 +170,8 @@ export default function SingleProduct() {
                                     </button>
                                 </div>
                             </div>
-                            <button className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
-                            <button className="btn btn-primary px-3 mx-1"><i className="fa fa-heart mr-1"></i> Add To Wishlist</button>
+                            <button className="btn btn-primary px-3" onClick={addToCart}><i className="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+                            <button className="btn btn-primary px-3 mx-1" onClick={addToWishlist}><i className="fa fa-heart mr-1"></i> Add To Wishlist</button>
                         </div>
 
                     </div>

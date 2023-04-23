@@ -1,10 +1,6 @@
 {
   "maincategory": [
     {
-      "id": 0,
-      "name": "Test"
-    },
-    {
       "name": "Male",
       "id": 1
     },
@@ -15,13 +11,13 @@
     {
       "id": 3,
       "name": "Kids"
+    },
+    {
+      "name": "Transegender",
+      "id": 4
     }
   ],
   "subcategory": [
-    {
-      "id": 0,
-      "name": "Test"
-    },
     {
       "name": "Jeans",
       "id": 1
@@ -37,6 +33,10 @@
     {
       "name": "Trouser",
       "id": 4
+    },
+    {
+      "name": "Trousers",
+      "id": 5
     }
   ],
   "brand": [
@@ -91,24 +91,6 @@
       "pic2": "p29.jpg",
       "pic3": "p34.jpg",
       "pic4": "p2.jpg"
-    },
-    {
-      "id": 1,
-      "name": "Male Jeans Slim Fit Mufti",
-      "maincategory": "Male",
-      "subcategory": "Jeans",
-      "brand": "Mufti",
-      "color": "Blue",
-      "size": "36",
-      "baseprice": "5000",
-      "discount": "75",
-      "finalprice": 1250,
-      "stock": "In Stock",
-      "description": "This is a Sample Product",
-      "pic1": "p5.jpg",
-      "pic2": "p2.jpg",
-      "pic3": "p1.jpg",
-      "pic4": "p7.jpg"
     },
     {
       "name": "Female Jeans Regular Fit Mufti",
@@ -235,6 +217,24 @@
       "pic3": "p72.jpg",
       "pic4": "p71.jpg",
       "id": 8
+    },
+    {
+      "id": 9,
+      "name": "Blue Jeans",
+      "maincategory": "Transegender",
+      "subcategory": "Trousers",
+      "brand": "Nike",
+      "color": "Blue",
+      "size": "32",
+      "baseprice": "5000",
+      "discount": "50",
+      "finalprice": 2500,
+      "stock": "In Stock",
+      "description": "This is a Sample Product for testing purpose only",
+      "pic1": "p5.jpg",
+      "pic2": "p11.jpg",
+      "pic3": "p16.jpg",
+      "pic4": "p47.jpg"
     }
   ],
   "user": [
@@ -318,6 +318,26 @@
       "qty": 0,
       "total": 0,
       "pic": "Test"
+    },
+    {
+      "userid": "3",
+      "productid": 8,
+      "name": "Female Trouser Black",
+      "color": "Black",
+      "size": "32",
+      "total": 1328.7,
+      "pic": "p70.jpg",
+      "id": 1
+    },
+    {
+      "userid": "3",
+      "productid": 7,
+      "name": "Female Shirt White Zara",
+      "color": "White",
+      "size": "XL",
+      "total": 939,
+      "pic": "p9.jpg",
+      "id": 2
     }
   ],
   "wishlist": [
@@ -330,6 +350,24 @@
       "size": "Test",
       "price": "Test",
       "pic": "Test"
+    },
+    {
+      "userid": "3",
+      "productid": 7,
+      "name": "Female Shirt White Zara",
+      "color": "White",
+      "size": "XL",
+      "pic": "p9.jpg",
+      "id": 1
+    },
+    {
+      "userid": "3",
+      "productid": 6,
+      "name": "Male Jeans Mufti",
+      "color": "Blue",
+      "size": "34",
+      "pic": "p44.jpg",
+      "id": 2
     }
   ],
   "checkout": [
