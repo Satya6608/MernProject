@@ -1,6 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
+import { getCart, updateCart, deleteCart } from '../Store/ActionCreators/CartActionCreators'
+import { useDispatch, useSelector } from 'react-redux';
 export default function Cart() {
+    var [cart, setCart] = useState([]);
+    var [total, setTotal] = useState(0);
+    var [shipping, setShipping] = useState(0);
+    var [final, setFinal] = useState(0);
+    var dispatch = useDispatch()
+    var carts = useSelector(state => state.CartStateData)
+    function getApiData() {
+        dispatch(getCart())
+        var data = carts.filter((item) => item.userid === localStorage.getItem("userid"));
+        setCart(data)
+        var total = 0;
+        var shipping = 0;
+        for (let item of data) {
+            total = total + item.total
+        }
+        if (total > 0 && total <= 1000) {
+            shipping = 150;
+            setTotal(total)
+            setShipping(shipping)
+            setFinal(shipping + total)
+        }
+    }
+    useEffect(() => {
+        getApiData()
+    }, [carts])
     return (
         <>
             <div className="container-fluid pt-5">
@@ -10,6 +37,8 @@ export default function Cart() {
                             <thead className="bg-secondary text-dark">
                                 <tr>
                                     <th>Products</th>
+                                    <th>Color</th>
+                                    <th>Size</th>
                                     <th>Price</th>
                                     <th>Quantity</th>
                                     <th>Total</th>
@@ -17,123 +46,45 @@ export default function Cart() {
                                 </tr>
                             </thead>
                             <tbody className="align-middle">
-                                <tr>
-                                    <td className="align-middle"><img src="assets/img/product-1.jpg" alt="" style={{width: "50px"}}/> Colorful Stylish Shirt</td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div className="input-group quantity mx-auto" style={{width: "100px"}}>
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus" >
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" className="form-control form-control-sm bg-secondary text-center" value="1"/>
+                                {
+                                    cart.map((item, index)=>{
+                                        return <tr key={index}>
+                                        <td className="align-middle"><img src={`/assets/productimages/${item.pic}`} alt="" style={{ width: "50px" }} />{item.name}</td>
+                                        <td className="align-middle">{item.color}</td>
+                                        <td className="align-middle">{item.size}</td>
+                                        <td className="align-middle">&#8377;{item.price}</td>
+                                        <td className="align-middle">
+                                            <div className="input-group quantity mx-auto" style={{ width: "100px" }}>
+                                                <div className="input-group-btn">
+                                                    <button className="btn btn-sm btn-primary btn-minus" >
+                                                        <i className="fa fa-minus"></i>
+                                                    </button>
+                                                </div>
+                                                <input type="text" className="form-control form-control-sm bg-secondary text-center" value={item.qty} />
                                                 <div className="input-group-btn">
                                                     <button className="btn btn-sm btn-primary btn-plus">
                                                         <i className="fa fa-plus"></i>
                                                     </button>
                                                 </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle"><button className="btn btn-sm btn-primary"><i className="fa fa-times"></i></button></td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle"><img src="assets/img/product-2.jpg" alt="" style={{width: "50px"}}/> Colorful Stylish Shirt</td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div className="input-group quantity mx-auto" style={{width: "100px"}}>
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus" >
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
                                             </div>
-                                            <input type="text" className="form-control form-control-sm bg-secondary text-center" value="1"/>
-                                                <div className="input-group-btn">
-                                                    <button className="btn btn-sm btn-primary btn-plus">
-                                                        <i className="fa fa-plus"></i>
-                                                    </button>
-                                                </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle"><button className="btn btn-sm btn-primary"><i className="fa fa-times"></i></button></td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle"><img src="assets/img/product-3.jpg" alt="" style={{width: "50px"}}/> Colorful Stylish Shirt</td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div className="input-group quantity mx-auto" style={{width: "100px"}}>
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus" >
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" className="form-control form-control-sm bg-secondary text-center" value="1"/>
-                                                <div className="input-group-btn">
-                                                    <button className="btn btn-sm btn-primary btn-plus">
-                                                        <i className="fa fa-plus"></i>
-                                                    </button>
-                                                </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle"><button className="btn btn-sm btn-primary"><i className="fa fa-times"></i></button></td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle"><img src="assets/img/product-4.jpg" alt="" style={{width: "50px"}}/> Colorful Stylish Shirt</td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div className="input-group quantity mx-auto" style={{width: "100px"}}>
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus" >
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" className="form-control form-control-sm bg-secondary text-center" value="1"/>
-                                                <div className="input-group-btn">
-                                                    <button className="btn btn-sm btn-primary btn-plus">
-                                                        <i className="fa fa-plus"></i>
-                                                    </button>
-                                                </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle"><button className="btn btn-sm btn-primary"><i className="fa fa-times"></i></button></td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle"><img src="assets/img/product-5.jpg" alt="" style={{width: "50px"}}/> Colorful Stylish Shirt</td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle">
-                                        <div className="input-group quantity mx-auto" style={{width: "100px"}}>
-                                            <div className="input-group-btn">
-                                                <button className="btn btn-sm btn-primary btn-minus" >
-                                                    <i className="fa fa-minus"></i>
-                                                </button>
-                                            </div>
-                                            <input type="text" className="form-control form-control-sm bg-secondary text-center" value="1"/>
-                                                <div className="input-group-btn">
-                                                    <button className="btn btn-sm btn-primary btn-plus">
-                                                        <i className="fa fa-plus"></i>
-                                                    </button>
-                                                </div>
-                                        </div>
-                                    </td>
-                                    <td className="align-middle">$150</td>
-                                    <td className="align-middle"><button className="btn btn-sm btn-primary"><i className="fa fa-times"></i></button></td>
-                                </tr>
+                                        </td>
+                                        <td className="align-middle">&#8377;{item.total}</td>
+                                        <td className="align-middle"><button className="btn btn-sm btn-primary"><i className="fa fa-times"></i></button></td>
+                                    </tr>
+                                    })
+                                }
                             </tbody>
                         </table>
                     </div>
                     <div className="col-lg-4">
-                        <form className="mb-5" action="">
+                        {/* <form className="mb-5" action="">
                             <div className="input-group">
-                                <input type="text" className="form-control p-4" placeholder="Coupon Code"/>
-                                    <div className="input-group-append">
-                                        <button className="btn btn-primary">Apply Coupon</button>
-                                    </div>
+                                <input type="text" className="form-control p-4" placeholder="Coupon Code" />
+                                <div className="input-group-append">
+                                    <button className="btn btn-primary">Apply Coupon</button>
+                                </div>
                             </div>
-                        </form>
+                        </form> */}
                         <div className="card border-secondary mb-5">
                             <div className="card-header bg-secondary border-0">
                                 <h4 className="font-weight-semi-bold m-0">Cart Summary</h4>
