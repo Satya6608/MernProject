@@ -36,11 +36,12 @@ export default function SingleProduct() {
                 name : p.name,
                 color : p.color,
                 size : p.size,
-                price : p.price,
-                qty : p.qty,
+                price : p.finalprice,
+                qty : qty,
                 total : p.finalprice*qty,
                 pic : p.pic1,
             }
+            console.log("item has been added to cart",item)
             dispatch(addCart(item))
             navigate("/cart")
         }
