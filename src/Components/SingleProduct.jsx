@@ -49,7 +49,7 @@ export default function SingleProduct() {
     function addToWishlist(){
         var data = wishlist.find((item)=>item.productid===Number(id) && item.userid===localStorage.getItem("userid"));
         if(data){
-            navigate("/profile")
+            navigate("/wishlist")
         }
         else{
             var item = {
@@ -62,7 +62,7 @@ export default function SingleProduct() {
                 pic : p.pic1,
             }
             dispatch(addWishlist(item))
-            navigate("/profile")
+            navigate("/wishlist")
         }
         
     }

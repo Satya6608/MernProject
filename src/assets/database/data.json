@@ -240,17 +240,17 @@
   "user": [
     {
       "id": 0,
-      "name": "Test",
+      "name": "Ajay",
       "username": "Test",
-      "email": "Test",
-      "phone": "Test",
-      "addressline1": "Test",
-      "addressline2": "Test",
-      "addressline3": "Test",
-      "pin": "Test",
-      "city": "Test",
-      "state": "Test",
-      "pic": "Test",
+      "email": "ajay@gmail.com",
+      "phone": "8076419914",
+      "addressline1": "226",
+      "addressline2": "gali no 3",
+      "addressline3": "mandawali new delhi",
+      "pin": "110099",
+      "city": "delhi",
+      "state": "delhi",
+      "pic": "p2.jpg",
       "role": "User",
       "otp": ""
     },
@@ -318,6 +318,54 @@
       "qty": 0,
       "total": 0,
       "pic": "Test"
+    },
+    {
+      "userid": null,
+      "productid": 7,
+      "name": "Female Shirt White Zara",
+      "color": "White",
+      "size": "XL",
+      "price": 939,
+      "qty": 2,
+      "total": 1878,
+      "pic": "p9.jpg",
+      "id": 1
+    },
+    {
+      "userid": null,
+      "productid": 2,
+      "name": "Female Jeans Regular Fit Mufti",
+      "color": "Black",
+      "size": "32",
+      "price": 3825,
+      "qty": 5,
+      "total": 19125,
+      "pic": "p12.jpg",
+      "id": 2
+    },
+    {
+      "userid": "3",
+      "productid": 8,
+      "name": "Female Trouser Black",
+      "color": "Black",
+      "size": "32",
+      "price": 1328.7,
+      "qty": 1,
+      "total": 1328.7,
+      "pic": "p70.jpg",
+      "id": 3
+    },
+    {
+      "userid": "3",
+      "productid": 3,
+      "name": "Kids Jeans Tommy Hilfiger",
+      "color": "Black",
+      "size": "26",
+      "price": 2475,
+      "qty": 2,
+      "total": 4950,
+      "pic": "p64.jpg",
+      "id": 4
     }
   ],
   "wishlist": [
@@ -333,20 +381,20 @@
     },
     {
       "userid": "3",
-      "productid": 7,
-      "name": "Female Shirt White Zara",
-      "color": "White",
-      "size": "XL",
-      "pic": "p9.jpg",
+      "productid": 8,
+      "name": "Female Trouser Black",
+      "color": "Black",
+      "size": "32",
+      "pic": "p70.jpg",
       "id": 1
     },
     {
       "userid": "3",
-      "productid": 6,
-      "name": "Male Jeans Mufti",
-      "color": "Blue",
-      "size": "34",
-      "pic": "p44.jpg",
+      "productid": 0,
+      "name": "Male Tshirt Polo",
+      "color": "White",
+      "size": "M",
+      "pic": "p15.jpg",
       "id": 2
     }
   ],
@@ -412,6 +460,56 @@
         }
       ],
       "id": 2
+    },
+    {
+      "userid": "3",
+      "paymentmode": "NETBANKING",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 1735,
+      "shippingAmount": 0,
+      "finalAmount": 1735,
+      "date": "2023-04-30T00:52:53.218Z",
+      "product": [
+        {
+          "userid": "3",
+          "productid": 0,
+          "name": "Male Tshirt Polo",
+          "color": "White",
+          "size": "M",
+          "price": 1735,
+          "qty": 1,
+          "total": 1735,
+          "pic": "p15.jpg",
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userid": null,
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 1735,
+      "shippingAmount": 0,
+      "finalAmount": 1735,
+      "date": "2023-04-30T04:16:01.997Z",
+      "product": [
+        {
+          "userid": null,
+          "productid": 0,
+          "name": "Male Tshirt Polo",
+          "color": "White",
+          "size": "M",
+          "price": 1735,
+          "qty": 1,
+          "total": 1735,
+          "pic": "p15.jpg",
+          "id": 1
+        }
+      ],
+      "id": 4
     }
   ],
   "newslatter": [

@@ -7,6 +7,7 @@ import Home from './Home'
 import Shop from './Shop'
 import SingleProduct from './SingleProduct'
 import Cart from './Cart'
+import Wishlist from './Wishlist'
 import Checkout from './Checkout'
 import Contact from './Contact'
 import Login from './Login'
@@ -41,6 +42,7 @@ export default function App() {
                 <Route path='/shop/:maincat' element={<Shop/>}/>
                 <Route path='/single-product/:id' element={<SingleProduct/>}/>
                 <Route path='/cart' element={<Cart/>}/>
+                <Route path='/wishlist' element={<Wishlist/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>
                 <Route path='/contact' element={<Contact/>}/>
                 <Route path='/login' element={<Login/>}/>

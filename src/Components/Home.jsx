@@ -6,13 +6,13 @@ import { getProduct } from "../Store/ActionCreators/ProductActionCreators"
 export default function Home() {
     var product = useSelector((state) => state.ProductStateData)
     var dispatch = useDispatch()
-    if(product.reverse){
+    if (product.reverse) {
         product.reverse()
         product = product.slice(0, 8)
     }
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(getProduct())
-    },[])
+    }, [])
     return (
         <>
             <div id="header-carousel" className="carousel slide" data-ride="carousel">
@@ -166,16 +166,18 @@ export default function Home() {
                             return <div key={index} className="col-lg-3 col-md-6 col-sm-12 pb-1">
                                 <div className="card product-item border-0 mb-4">
                                     <div className="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <a target="_blank" href={`assets/productimages/${item.pic1}`}><img className=" w-100" src={`assets/productimages/${item.pic1}`} height="400px" alt="" /></a>
+                                        <Link to={`/single-product/${item.id}`}><img className=" w-100" src={`assets/productimages/${item.pic1}`} height="400px" alt="" /></Link>
                                     </div>
                                     <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                        <h6 className="text-truncate mb-3">{item.name}</h6>
-                                        <div className="d-flex justify-content-center">
-                                            <h6>&#8377;{item.finalprice}</h6><h6 className="text-muted ml-2"><del>&#8377;{item.baseprice}</del></h6>
-                                        </div>
-                                        <h6>{item.discount}% Less</h6>
+                                        <Link to={`/single-product/${item.id}`}>
+                                            <h6 className="text-truncate mb-3">{item.name}</h6>
+                                            <div className="d-flex justify-content-center">
+                                                <h6>&#8377;{item.finalprice}</h6><h6 className="text-muted ml-2"><del>&#8377;{item.baseprice}</del></h6>
+                                            </div>
+                                            <h6>{item.discount}% Less</h6>
+                                        </Link>
                                     </div>
-                                        <Link to={`/single-product/${item.id}`}  className="p-2 text-decoration-none text-center btn-primary mybtn"><i className="fas fa-eye mr-1 mybtn"></i>View Detail</Link>
+                                    <Link to={`/single-product/${item.id}`} className="p-2 text-decoration-none text-center btn-primary mybtn"><i className="fas fa-eye mr-1 mybtn"></i>View Detail</Link>
                                 </div>
                             </div>
                         })
@@ -207,7 +209,7 @@ export default function Home() {
             {/* <!-- Subscribe End --> */}
 
 
-            
+
 
 
             {/* <!-- Vendor Start --> */}

@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Link, useNavigate } from 'react-router-dom'
+import { getCart } from '../Store/ActionCreators/CartActionCreators'
+import {  useSelector } from 'react-redux';
 export default function Navbar() {
+    var [cartnum, setCartnum] = useState([]);
+    var [wishlistnum, setWishlistnum] = useState([]);
     var navigate = useNavigate()
+    var carts = useSelector(state => state.CartStateData);
+    var wishlists = useSelector(state => state.WishlistStateData)
     function logout() {
         localStorage.clear()
         navigate("/login")
     }
+    function getApiData() {
+        var data = carts.filter((item) => item.userid === localStorage.getItem("userid"));
+        var wishlistdata = wishlists.filter((item) => item.userid === localStorage.getItem("userid"));
+        var num = data.length;
+        var wishNum = wishlistdata.length
+        setCartnum(num);
+        setWishlistnum(wishNum)
+    }
+    useEffect(() => {
+        getApiData()
+    },)
     return (
         <>
             {/* <!-- Topbar Start --> */}
@@ -30,13 +47,13 @@ export default function Navbar() {
                         </form>
                     </div>
                     <div className="col-lg-3 col-6 text-right">
-                        <Link to="" className="btn border">
+                        <Link to="/wishlist" className="btn border">
                             <i className="fas fa-heart text-primary"></i>
-                            <span className="badge">0</span>
+                            <span className="badge">{wishlistnum}</span>
                         </Link>
-                        <Link to="" className="btn border">
+                        <Link to="/cart" className="btn border">
                             <i className="fas fa-shopping-cart text-primary"></i>
-                            <span className="badge">0</span>
+                            <span className="badge">{cartnum}</span>
                         </Link>
                     </div>
                 </div>

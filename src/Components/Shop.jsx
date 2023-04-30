@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link,useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
 import { getProduct } from "../Store/ActionCreators/ProductActionCreators"
@@ -11,7 +11,7 @@ export default function Shop() {
     var [mc, setmc] = useState("All")
     var [sc, setsc] = useState("All")
     var [br, setbr] = useState("All")
-    var {maincat} = useParams()
+    var { maincat } = useParams()
     var [flag, setflag] = useState(0)
     var [shopproducts, setshopproducts] = useState([])
     var product = useSelector((state) => state.ProductStateData)
@@ -100,10 +100,10 @@ export default function Shop() {
         dispatch(getMaincategory())
         dispatch(getSubcategory())
         dispatch(getBrand())
-        if(maincat==="All")
-        setshopproducts(product)
+        if (maincat === "All")
+            setshopproducts(product)
         else
-        setshopproducts(product.filter((item)=>item.maincategory===maincat))
+            setshopproducts(product.filter((item) => item.maincategory === maincat))
     }, [product.length])
     return (
         <>
@@ -258,14 +258,16 @@ export default function Shop() {
                                     return <div key={index} className="col-lg-3 col-md-6 col-sm-12 pb-1">
                                         <div className="card product-item border-0 mb-4">
                                             <div className="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                                <a target="_blank" href={`/assets/productimages/${item.pic1}`}> <img className=" w-100" src={`/assets/productimages/${item.pic1}`} height="auto" alt="" /></a>
+                                                <Link to={`/single-product/${item.id}`}> <img className=" w-100" src={`/assets/productimages/${item.pic1}`} height="auto" alt="" /></Link>
                                             </div>
                                             <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                                <h6 className="text-truncate mb-3">{item.name}</h6>
-                                                <div className="d-flex justify-content-center">
-                                                    <h6>&#8377;{item.finalprice}</h6><h6 className="text-muted ml-2"><del>&#8377;{item.baseprice}</del></h6>
-                                                </div>
-                                                <h6>{item.discount}% Less</h6>
+                                                <Link to={`/single-product/${item.id}`}>
+                                                    <h6 className="text-truncate mb-3">{item.name}</h6>
+                                                    <div className="d-flex justify-content-center">
+                                                        <h6>&#8377;{item.finalprice}</h6><h6 className="text-muted ml-2"><del>&#8377;{item.baseprice}</del></h6>
+                                                    </div>
+                                                    <h6>{item.discount}% Less</h6>
+                                                </Link>
                                             </div>
                                             <Link to={`/single-product/${item.id}`} className="p-2 text-decoration-none text-center btn-primary mybtn"><i className="fas fa-eye mr-1 mybtn"></i>View Detail</Link>
                                         </div>

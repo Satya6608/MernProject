@@ -75,7 +75,7 @@ export default function Cart() {
                                 {
                                     cart.map((item, index) => {
                                         return <tr key={index}>
-                                            <td className="align-middle"><img src={`/assets/productimages/${item.pic}`} alt="" style={{ width: "50px" }} />{item.name}</td>
+                                            <td className="align-middle product-row"><img src={`/assets/productimages/${item.pic}`} alt="" style={{ width: "50px" }} />{item.name}</td>
                                             <td className="align-middle">{item.color}</td>
                                             <td className="align-middle">{item.size}</td>
                                             <td className="align-middle">&#8377;{item.price}</td>
