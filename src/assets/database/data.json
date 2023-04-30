@@ -301,7 +301,7 @@
       "pin": "110099",
       "city": "Delhi",
       "state": "Delhi",
-      "pic": "user.png",
+      "pic": "p8.jpg",
       "role": "User",
       "otp": ""
     }
@@ -318,39 +318,6 @@
       "qty": 0,
       "total": 0,
       "pic": "Test"
-    },
-    {
-      "userid": "3",
-      "productid": 8,
-      "name": "Female Trouser Black",
-      "color": "Black",
-      "size": "32",
-      "total": null,
-      "pic": "p70.jpg",
-      "id": 1,
-      "qty": 8
-    },
-    {
-      "userid": "3",
-      "productid": 9,
-      "name": "Blue Jeans",
-      "color": "Blue",
-      "size": "32",
-      "total": 2500,
-      "pic": "p5.jpg",
-      "id": 2
-    },
-    {
-      "userid": "3",
-      "productid": 3,
-      "name": "Kids Jeans Tommy Hilfiger",
-      "color": "Black",
-      "size": "26",
-      "price": 2475,
-      "qty": 1,
-      "total": 2475,
-      "pic": "p64.jpg",
-      "id": 3
     }
   ],
   "wishlist": [
@@ -395,6 +362,56 @@
       "finalamount": 0,
       "date": "Test",
       "products": []
+    },
+    {
+      "userid": "3",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 1328.7,
+      "shippingAmount": 0,
+      "finalAmount": 1328.7,
+      "date": "2023-04-29T19:11:02.019Z",
+      "product": [
+        {
+          "userid": "3",
+          "productid": 8,
+          "name": "Female Trouser Black",
+          "color": "Black",
+          "size": "32",
+          "price": 1328.7,
+          "qty": 1,
+          "total": 1328.7,
+          "pic": "p70.jpg",
+          "id": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userid": "3",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 939,
+      "shippingAmount": 150,
+      "finalAmount": 1089,
+      "date": "2023-04-29T19:11:37.164Z",
+      "product": [
+        {
+          "userid": "3",
+          "productid": 7,
+          "name": "Female Shirt White Zara",
+          "color": "White",
+          "size": "XL",
+          "price": 939,
+          "qty": 1,
+          "total": 939,
+          "pic": "p9.jpg",
+          "id": 1
+        }
+      ],
+      "id": 2
     }
   ],
   "newslatter": [

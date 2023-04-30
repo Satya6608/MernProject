@@ -44,6 +44,12 @@ export default function Cart() {
             setShipping(shipping)
             setFinal(shipping + total)
         }
+        else{
+            shipping = 0;
+            setTotal(total)
+            setShipping(shipping)
+            setFinal(shipping + total)
+        }
     }
     useEffect(() => {
         getApiData()

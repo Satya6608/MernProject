@@ -258,7 +258,7 @@ export default function Shop() {
                                     return <div key={index} className="col-lg-3 col-md-6 col-sm-12 pb-1">
                                         <div className="card product-item border-0 mb-4">
                                             <div className="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                                <a target="_blank" href={`/assets/productimages/${item.pic1}`}> <img className=" w-100" src={`/assets/productimages/${item.pic1}`} height="250px" alt="" /></a>
+                                                <a target="_blank" href={`/assets/productimages/${item.pic1}`}> <img className=" w-100" src={`/assets/productimages/${item.pic1}`} height="auto" alt="" /></a>
                                             </div>
                                             <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
                                                 <h6 className="text-truncate mb-3">{item.name}</h6>

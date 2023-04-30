@@ -30,6 +30,7 @@ import AdminAddProduct from './Admin/AdminAddProduct'
 import AdminUpdateProduct from './Admin/AdminUpdateProduct'
 import Profile from './Profile'
 import UpdateProfile from './UpdateProfile'
+import Confirmation from './Confirmation'
 
 export default function App() {
     return (
@@ -46,6 +47,7 @@ export default function App() {
                 <Route path='/signup' element={<SignUP/>}/>
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/update-profile/:id' element={<UpdateProfile/>}/>
+                <Route path='/confirmation' element={<Confirmation/>}/>
 
 
                 <Route path='/admin-home' element={<AdminHome/>}/>

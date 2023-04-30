@@ -317,7 +317,10 @@ legend {
   color: inherit;
   white-space: normal;
 }
-
+.image-box{
+  max-height: 550px;
+  overflow: hidden;
+}
 @media (max-width: 1200px) {
   legend {
     font-size: calc(1.275rem + 0.3vw) ;
@@ -9554,7 +9557,9 @@ a.text-dark:hover, a.text-dark:focus {
 .product-item .product-img img {
   transition: .5s;
 }
-
+.product-item .product-img{
+  height: 250px;
+}
 .cat-item:hover .cat-img img,
 .product-item:hover .product-img img {
   transform: scale(1.2);
