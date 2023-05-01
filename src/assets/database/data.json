@@ -320,30 +320,6 @@
       "pic": "Test"
     },
     {
-      "userid": null,
-      "productid": 7,
-      "name": "Female Shirt White Zara",
-      "color": "White",
-      "size": "XL",
-      "price": 939,
-      "qty": 2,
-      "total": 1878,
-      "pic": "p9.jpg",
-      "id": 1
-    },
-    {
-      "userid": null,
-      "productid": 2,
-      "name": "Female Jeans Regular Fit Mufti",
-      "color": "Black",
-      "size": "32",
-      "price": 3825,
-      "qty": 5,
-      "total": 19125,
-      "pic": "p12.jpg",
-      "id": 2
-    },
-    {
       "userid": "3",
       "productid": 8,
       "name": "Female Trouser Black",
