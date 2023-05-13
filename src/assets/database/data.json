@@ -255,21 +255,21 @@
       "otp": ""
     },
     {
-      "name": "Nitin Chauhan",
+      "id": 1,
+      "name": "Satya Prakash",
       "username": "nitin",
-      "email": "vishankchauhan@gmail.com",
-      "phone": "9873848046",
+      "email": "satyaprakash6608@gmail.com",
+      "phone": "8076419914",
       "password": "Nitin@123",
-      "addressline1": "",
-      "addressline2": "",
-      "addressline3": "",
-      "pin": "",
-      "city": "",
-      "state": "",
-      "pic": "",
+      "addressline1": "226 ",
+      "addressline2": " gali no 3",
+      "addressline3": "mandawali",
+      "pin": "110092",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pic": "p14.jpg",
       "role": "User",
-      "otp": "",
-      "id": 1
+      "otp": ""
     },
     {
       "name": "Vishank Chauhan",
@@ -318,30 +318,6 @@
       "qty": 0,
       "total": 0,
       "pic": "Test"
-    },
-    {
-      "userid": "3",
-      "productid": 8,
-      "name": "Female Trouser Black",
-      "color": "Black",
-      "size": "32",
-      "price": 1328.7,
-      "qty": 1,
-      "total": 1328.7,
-      "pic": "p70.jpg",
-      "id": 3
-    },
-    {
-      "userid": "3",
-      "productid": 3,
-      "name": "Kids Jeans Tommy Hilfiger",
-      "color": "Black",
-      "size": "26",
-      "price": 2475,
-      "qty": 2,
-      "total": 4950,
-      "pic": "p64.jpg",
-      "id": 4
     }
   ],
   "wishlist": [
@@ -357,111 +333,26 @@
     },
     {
       "userid": "3",
-      "productid": 9,
-      "name": "Blue Jeans",
-      "color": "Blue",
+      "productid": 8,
+      "name": "Female Trouser Black",
+      "color": "Black",
       "size": "32",
-      "pic": "p5.jpg",
+      "price": 1328.7,
+      "pic": "p70.jpg",
       "id": 1
     },
     {
       "userid": "3",
-      "productid": 2,
-      "name": "Female Jeans Regular Fit Mufti",
-      "color": "Black",
-      "size": "32",
-      "pic": "p12.jpg",
+      "productid": 5,
+      "name": "Kids Tshirt Mufti",
+      "color": "Blue",
+      "size": "SM",
+      "price": 2436,
+      "pic": "p59.jpg",
       "id": 2
     }
   ],
   "checkout": [
-    {
-      "id": 0,
-      "userid": "Test",
-      "paymentmode": "Test",
-      "orderstatus": "Test",
-      "paymentstatus": "Test",
-      "totalamount": 0,
-      "shippingamount": 0,
-      "finalamount": 0,
-      "date": "Test",
-      "products": []
-    },
-    {
-      "userid": "3",
-      "paymentmode": "COD",
-      "paymentStatus": "Pending",
-      "orderStatus": "Order Placed",
-      "totalAmount": 1328.7,
-      "shippingAmount": 0,
-      "finalAmount": 1328.7,
-      "date": "2023-04-29T19:11:02.019Z",
-      "product": [
-        {
-          "userid": "3",
-          "productid": 8,
-          "name": "Female Trouser Black",
-          "color": "Black",
-          "size": "32",
-          "price": 1328.7,
-          "qty": 1,
-          "total": 1328.7,
-          "pic": "p70.jpg",
-          "id": 1
-        }
-      ],
-      "id": 1
-    },
-    {
-      "userid": "3",
-      "paymentmode": "COD",
-      "paymentStatus": "Pending",
-      "orderStatus": "Order Placed",
-      "totalAmount": 939,
-      "shippingAmount": 150,
-      "finalAmount": 1089,
-      "date": "2023-04-29T19:11:37.164Z",
-      "product": [
-        {
-          "userid": "3",
-          "productid": 7,
-          "name": "Female Shirt White Zara",
-          "color": "White",
-          "size": "XL",
-          "price": 939,
-          "qty": 1,
-          "total": 939,
-          "pic": "p9.jpg",
-          "id": 1
-        }
-      ],
-      "id": 2
-    },
-    {
-      "userid": "3",
-      "paymentmode": "NETBANKING",
-      "paymentStatus": "Pending",
-      "orderStatus": "Order Placed",
-      "totalAmount": 1735,
-      "shippingAmount": 0,
-      "finalAmount": 1735,
-      "date": "2023-04-30T00:52:53.218Z",
-      "product": [
-        {
-          "userid": "3",
-          "productid": 0,
-          "name": "Male Tshirt Polo",
-          "color": "White",
-          "size": "M",
-          "price": 1735,
-          "qty": 1,
-          "total": 1735,
-          "pic": "p15.jpg",
-          "id": 1
-        }
-      ],
-      "id": 3
-    },
     {
       "userid": null,
       "paymentmode": "COD",
@@ -486,6 +377,118 @@
         }
       ],
       "id": 4
+    },
+    {
+      "userid": "3",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 2500,
+      "shippingAmount": 0,
+      "finalAmount": 2500,
+      "date": "2023-05-13T07:48:41.577Z",
+      "product": [
+        {
+          "userid": "3",
+          "productid": 9,
+          "name": "Blue Jeans",
+          "color": "Blue",
+          "size": "32",
+          "price": 2500,
+          "qty": 1,
+          "total": 2500,
+          "pic": "p5.jpg",
+          "id": 1
+        }
+      ],
+      "id": 5
+    },
+    {
+      "userid": "1",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 2436,
+      "shippingAmount": 0,
+      "finalAmount": 2436,
+      "date": "2023-05-13T07:59:40.613Z",
+      "product": [
+        {
+          "userid": "1",
+          "productid": 5,
+          "name": "Kids Tshirt Mufti",
+          "color": "Blue",
+          "size": "SM",
+          "price": 2436,
+          "qty": 1,
+          "total": 2436,
+          "pic": "p59.jpg",
+          "id": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "userid": "1",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 6325,
+      "shippingAmount": 0,
+      "finalAmount": 6325,
+      "date": "2023-05-13T08:36:47.680Z",
+      "product": [
+        {
+          "userid": "1",
+          "productid": 2,
+          "name": "Female Jeans Regular Fit Mufti",
+          "color": "Black",
+          "size": "32",
+          "price": 3825,
+          "qty": 1,
+          "total": 3825,
+          "pic": "p12.jpg",
+          "id": 1
+        },
+        {
+          "userid": "1",
+          "productid": 9,
+          "name": "Blue Jeans",
+          "color": "Blue",
+          "size": "32",
+          "price": 2500,
+          "qty": 1,
+          "total": 2500,
+          "pic": "p5.jpg",
+          "id": 2
+        }
+      ],
+      "id": 7
+    },
+    {
+      "userid": "1",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 9300.9,
+      "shippingAmount": 0,
+      "finalAmount": 9300.9,
+      "date": "2023-05-13T08:55:32.024Z",
+      "product": [
+        {
+          "userid": "1",
+          "productid": 8,
+          "name": "Female Trouser Black",
+          "color": "Black",
+          "size": "32",
+          "price": 1328.7,
+          "qty": 7,
+          "total": 9300.9,
+          "pic": "p70.jpg",
+          "id": 1
+        }
+      ],
+      "id": 8
     }
   ],
   "newslatter": [

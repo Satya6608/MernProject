@@ -115,6 +115,7 @@ export default function Navbar() {
                                     <div className="dropdown-menu rounded-0 m-0">
                                         <Link to="/profile" className="dropdown-item">Profile</Link>
                                         <Link to="/cart" className="dropdown-item">Cart</Link>
+                                        <Link to="/orders" className="dropdown-item">Orders</Link>
                                         <button onClick={logout} className="dropdown-item">Logout</button>
                                     </div>
                                 </> :

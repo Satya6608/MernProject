@@ -58,7 +58,7 @@ export default function SingleProduct() {
                 name : p.name,
                 color : p.color,
                 size : p.size,
-                price : p.price,
+                price : p.finalprice,
                 pic : p.pic1,
             }
             dispatch(addWishlist(item))

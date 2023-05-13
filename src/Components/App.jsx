@@ -32,6 +32,7 @@ import AdminUpdateProduct from './Admin/AdminUpdateProduct'
 import Profile from './Profile'
 import UpdateProfile from './UpdateProfile'
 import Confirmation from './Confirmation'
+import Orders from './Orders'
 
 export default function App() {
     return (
@@ -44,6 +45,7 @@ export default function App() {
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/wishlist' element={<Wishlist/>}/>
                 <Route path='/checkout' element={<Checkout/>}/>
+                <Route path='/orders' element={<Orders/>}/>
                 <Route path='/contact' element={<Contact/>}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/signup' element={<SignUP/>}/>
