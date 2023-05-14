@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
-import { getCheckout } from '../Store/ActionCreators/CheckoutActionCreators';
 import { getUser } from '../Store/ActionCreators/UserActionCreators';
 import BuyerProfile from './BuyerProfile';
 
 export default function Profile() {
   var [user, setUser] = useState({})
-  var [orders, setOrders] = useState([])
   var dispatch = useDispatch()
   var users = useSelector((state) => state.UserStateData)
-  var checkouts = useSelector((state) => state.UserStateData);
   function getAPIData() {
     dispatch(getUser())
     var data = users.find((item) => item.id === Number(localStorage.getItem("userid")))

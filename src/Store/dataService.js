@@ -358,3 +358,93 @@ export async function updateCheckoutAPI(data){
     })
     return await response.json()
 }
+
+
+
+//Services for Contact
+export async function createContactAPI(data){
+    var response = await fetch("/contact",{
+        method:"post",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify(data)
+    })
+    return await response.json()
+}
+
+export async function getContactAPI(){
+    var response = await fetch("/contact",{
+        method:"get",
+        headers:{
+            "content-type":"application/json"
+        }
+    })
+    return await response.json()
+}
+
+export async function deleteContactAPI(data){
+    var response = await fetch("/contact/"+data.id,{
+        method:"delete",
+        headers:{
+            "content-type":"application/json"
+        }
+    })
+    return await response.json()
+}
+
+export async function updateContactAPI(data){
+    var response = await fetch("/contact/"+data.id,{
+        method:"put",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify(data)
+    })
+    return await response.json()
+}
+
+
+
+//Services for Newslatter
+export async function createNewslatterAPI(data){
+    var response = await fetch("/newslatter",{
+        method:"post",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify(data)
+    })
+    return await response.json()
+}
+
+export async function getNewslatterAPI(){
+    var response = await fetch("/newslatter",{
+        method:"get",
+        headers:{
+            "content-type":"application/json"
+        }
+    })
+    return await response.json()
+}
+
+export async function deleteNewslatterAPI(data){
+    var response = await fetch("/newslatter/"+data.id,{
+        method:"delete",
+        headers:{
+            "content-type":"application/json"
+        }
+    })
+    return await response.json()
+}
+
+export async function updateNewslatterAPI(data){
+    var response = await fetch("/newslatter/"+data.id,{
+        method:"put",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify(data)
+    })
+    return await response.json()
+}

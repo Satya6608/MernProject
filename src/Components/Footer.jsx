@@ -1,6 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
+
+import { addNewslatter, getNewslatter } from '../Store/ActionCreators/NewslatterActionCreators'
 export default function Footer() {
+    var [email, setEmail] = useState("");
+    var [show, setShow] = useState(false)
+    var [msg, setMsg] = useState("")
+    var newslatters = useSelector(state => state.NewslatterStateData);
+    var dispatch = useDispatch()
+    function getData(e) {
+        setEmail(e.target.value)
+        setShow(false)
+    }
+    function postData(e) {
+        e.preventDefault()
+        var data = newslatters.find((item) => item.email === email);
+        if (data) {
+            setShow(true)
+            setMsg("Your Email Id is Already Subscribed")
+        }
+        else {
+            dispatch(addNewslatter({ email: email }))
+            setShow(true)
+            setMsg("Thanks!!! Your Email Id is Subscribed Successfully")
+            var frm = document.getElementsByName('newslatter-form')[0];
+            frm.reset();
+        }
+    }
+    function getApiData() {
+        dispatch(getNewslatter())
+    }
+    useEffect(() => {
+        getApiData()
+    }, [newslatters.length])
+
     return (
         <>
             {/* <!-- Footer Start --> */}
@@ -33,11 +67,20 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="col-md-4 mb-5">
+                                {
+                                    show ?
+                                        <div className="alert alert-success alert-dismissible fade show" role="alert">
+                                            {msg}
+                                            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div> : ""
+                                }
                                 <h5 className="font-weight-bold text-dark mb-4">Newsletter</h5>
-                                <form action="">
+                                <form onSubmit={postData} name='newslatter-form'>
                                     <div className="form-group">
                                         <input type="email" className="form-control border-0 py-4" placeholder="Your Email"
-                                            required="required" />
+                                            required="required" name='email' onChange={getData} />
                                     </div>
                                     <div>
                                         <button className="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>

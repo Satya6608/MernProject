@@ -8,6 +8,8 @@ import UserReducer from "./UserReducer";
 import CartReducer from "./CartReducer";
 import CheckoutReducer from "./CheckoutReducer";
 import WishlistReducer from "./WishlistReducer";
+import ContactReducer from "./ContactReducer";
+import NewslatterReducer from "./NewslatterReducer";
 
 export default combineReducers({
     MaincategoryStateData: MaincategoryReducer,
@@ -18,4 +20,6 @@ export default combineReducers({
     CartStateData: CartReducer,
     CheckoutStateData: CheckoutReducer,
     WishlistStateData: WishlistReducer,
+    ContactStateData: ContactReducer,
+    NewslatterStateData: NewslatterReducer,
 })

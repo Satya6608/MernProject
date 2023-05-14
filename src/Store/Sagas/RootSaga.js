@@ -8,8 +8,10 @@ import { userSaga } from "./UserSagas"
 import { cartSaga } from "./CartSagas"
 import { checkoutSaga } from "./CheckoutSagas"
 import { wishlistSaga } from "./WishlistSagas"
+import { contactSaga } from "./ContactSagas"
+import { newslatterSaga } from "./NewslatterSagas"
 
 
 export default function* RootSaga(){
-    yield all([maincategorySaga(),subcategorySaga(),brandSaga(),productSaga(),userSaga(),cartSaga(),wishlistSaga(),checkoutSaga()])
+    yield all([maincategorySaga(),subcategorySaga(),brandSaga(),productSaga(),userSaga(),cartSaga(),wishlistSaga(),checkoutSaga(),contactSaga(),newslatterSaga()])
 }

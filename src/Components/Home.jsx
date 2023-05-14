@@ -188,7 +188,7 @@ export default function Home() {
 
 
             {/* <!-- Subscribe Start --> */}
-            <div className="container-fluid bg-secondary my-1">
+            {/* <div className="container-fluid bg-secondary my-1">
                 <div className="row justify-content-md-center py-5 px-xl-5">
                     <div className="col-md-6 col-12 py-5">
                         <div className="text-center mb-2 pb-2">
@@ -205,7 +205,7 @@ export default function Home() {
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* <!-- Subscribe End --> */}
 
 
