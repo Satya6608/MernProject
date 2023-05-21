@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 import { addNewslatter, getNewslatter } from '../Store/ActionCreators/NewslatterActionCreators'
+import { Link } from 'react-router-dom';
 export default function Footer() {
     var [email, setEmail] = useState("");
     var [show, setShow] = useState(false)
@@ -50,23 +51,23 @@ export default function Footer() {
                     </div>
                     <div className="col-lg-8 col-md-12">
                         <div className="row">
-                            <div className="col-md-4 mb-5">
+                            <div className="col-md-3 mb-5">
                                 <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
                                 <div className="d-flex flex-column justify-content-start">
-                                    <a className="text-dark mb-2" href="index.html"><i className="fa fa-angle-right mr-2"></i>Home</a>
-                                    <a className="text-dark mb-2" href="shop.html"><i className="fa fa-angle-right mr-2"></i>About</a>
-                                    <a className="text-dark mb-2" href="detail.html"><i className="fa fa-angle-right mr-2"></i>Shop</a>
+                                    <Link className="text-dark mb-2" to="/"><i className="fa fa-angle-right mr-2"></i>Home</Link>
+                                    <Link className="text-dark mb-2" to="/about"><i className="fa fa-angle-right mr-2"></i>About</Link>
+                                    <Link className="text-dark mb-2" to="/shop/All"><i className="fa fa-angle-right mr-2"></i>Shop</Link>
                                 </div>
                             </div>
-                            <div className="col-md-4 mb-5">
+                            <div className="col-md-3 mb-5">
                                 <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
                                 <div className="d-flex flex-column justify-content-start">
-                                    <a className="text-dark mb-2" href="index.html"><i className="fa fa-angle-right mr-2"></i>Contact</a>
-                                    <a className="text-dark mb-2" href="shop.html"><i className="fa fa-angle-right mr-2"></i>Cart</a>
-                                    <a className="text-dark mb-2" href="detail.html"><i className="fa fa-angle-right mr-2"></i>Checkout</a>
+                                    <Link className="text-dark mb-2" to="/contact"><i className="fa fa-angle-right mr-2"></i>Contact</Link>
+                                    <Link className="text-dark mb-2" to="/cart"><i className="fa fa-angle-right mr-2"></i>Cart</Link>
+                                    <Link className="text-dark mb-2" to="/orders"><i className="fa fa-angle-right mr-2"></i>Checkout</Link>
                                 </div>
                             </div>
-                            <div className="col-md-4 mb-5">
+                            <div className="col-md-6 mb-5">
                                 {
                                     show ?
                                         <div className="alert alert-success alert-dismissible fade show" role="alert">

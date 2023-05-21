@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 import { Link, useNavigate } from 'react-router-dom'
-import { getCart } from '../Store/ActionCreators/CartActionCreators'
 import {  useSelector } from 'react-redux';
 export default function Navbar() {
     var [cartnum, setCartnum] = useState([]);
@@ -94,7 +93,7 @@ export default function Navbar() {
             {/* <div className="col-lg-9"> */}
             <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 sticky-top">
                 <Link to="" className="text-decoration-none d-block d-lg-none">
-                    <h1 className="m-0 display-5 font-weight-semi-bold"><span className="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                    <h1 className="m-0 display-5 font-weight-semi-bold"><span className="text-primary font-weight-bold border px-3 mr-1">My</span>Shop</h1>
                 </Link>
                 <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span className="navbar-toggler-icon"></span>
@@ -115,7 +114,7 @@ export default function Navbar() {
                                     <div className="dropdown-menu rounded-0 m-0">
                                         <Link to="/profile" className="dropdown-item">Profile</Link>
                                         <Link to="/cart" className="dropdown-item">Cart</Link>
-                                        <Link to="/orders" className="dropdown-item">Orders</Link>
+                                        <Link to="/orders" className="dropdown-item">Checkout</Link>
                                         <button onClick={logout} className="dropdown-item">Logout</button>
                                     </div>
                                 </> :

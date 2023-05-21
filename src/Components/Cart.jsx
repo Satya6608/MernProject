@@ -140,7 +140,7 @@ export default function Cart() {
                         </div>
                         :
                         <div className='nothing'>
-                            <h5 className="text-center">Nothing in cart</h5>
+                            <h5 className="text-center">YOUR SHOPPING CART IS EMPTY</h5>
                             <Link to="/shop/All" className="text-center nav-link">Back to shopping</Link>
                         </div>
                 }

@@ -56,7 +56,7 @@ export default function Wishlist() {
                         </div>
                         :
                         <div className='nothing'>
-                            <h5 className="text-center">Nothing in Wishlist</h5>
+                            <h5 className="text-center">YOUR WISHLIST IS EMPTY</h5>
                             <Link to="/shop/All" className="text-center nav-link">Back to shopping</Link>
                         </div>
                 }

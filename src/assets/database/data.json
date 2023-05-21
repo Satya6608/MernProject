@@ -239,22 +239,6 @@
   ],
   "user": [
     {
-      "id": 0,
-      "name": "Ajay",
-      "username": "Test",
-      "email": "ajay@gmail.com",
-      "phone": "8076419914",
-      "addressline1": "226",
-      "addressline2": "gali no 3",
-      "addressline3": "mandawali new delhi",
-      "pin": "110099",
-      "city": "delhi",
-      "state": "delhi",
-      "pic": "p2.jpg",
-      "role": "User",
-      "otp": ""
-    },
-    {
       "id": 1,
       "name": "Satya Prakash",
       "username": "nitin",
@@ -489,13 +473,34 @@
         }
       ],
       "id": 8
+    },
+    {
+      "userid": null,
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 2500,
+      "shippingAmount": 0,
+      "finalAmount": 2500,
+      "date": "2023-05-14T13:09:34.353Z",
+      "product": [
+        {
+          "userid": null,
+          "productid": 9,
+          "name": "Blue Jeans",
+          "color": "Blue",
+          "size": "32",
+          "price": 2500,
+          "qty": 1,
+          "total": 2500,
+          "pic": "p5.jpg",
+          "id": 1
+        }
+      ],
+      "id": 9
     }
   ],
   "newslatter": [
-    {
-      "id": 0,
-      "email": "Test"
-    },
     {
       "email": "satyaprakash6608@gmail.com",
       "id": 1
@@ -519,30 +524,54 @@
   ],
   "contact": [
     {
-      "id": 0,
-      "name": "Test",
-      "email": "Test",
-      "phone": "Test",
-      "subject": "Test",
-      "message": "Test",
-      "date": "Test",
-      "status": "Active"
+      "email": "satyaprakash6608@gmail.com",
+      "name": "Satya Prakash",
+      "phone": "08076419914",
+      "subject": "this is new dummy text",
+      "message": "thi is new dummy text for status",
+      "date": "2023-05-21T18:10:13.515Z",
+      "status": "Done",
+      "id": 4
     },
     {
-      "name": "Satya Prakash",
       "email": "satyaprakash6608@gmail.com",
+      "name": "Satya Prakash",
       "phone": "08076419914",
-      "subject": "dummy subject",
-      "message": "Andjksjncjsck",
-      "id": 1
+      "subject": "this is new dummy text",
+      "message": "thi is new dummy text for status",
+      "date": "2023-05-21T18:10:13.515Z",
+      "status": "Active",
+      "id": 5
     },
     {
-      "name": "Satya Prakash",
       "email": "satyaprakash6608@gmail.com",
+      "name": "Satya Prakash",
       "phone": "08076419914",
-      "subject": "dummy subject",
-      "message": "his is dummy",
-      "id": 2
+      "subject": "this is new dummy text",
+      "message": "thi is new dummy text for status",
+      "date": "2023-05-21T18:10:13.515Z",
+      "status": "Active",
+      "id": 6
+    },
+    {
+      "email": "satyaprakash6608@gmail.com",
+      "name": "Satya Prakash",
+      "phone": "08076419914",
+      "subject": "this is new dummy text",
+      "message": "thi is new dummy text for status",
+      "date": "2023-05-21T18:10:13.515Z",
+      "status": "Active",
+      "id": 7
+    },
+    {
+      "email": "satyaprakash6608@gmail.com",
+      "name": "Satya Prakash",
+      "phone": "08076419914",
+      "subject": "this is new dummy text",
+      "message": "thi is new dummy text for status",
+      "date": "2023-05-21T18:10:13.515Z",
+      "status": "Active",
+      "id": 8
     }
   ]
 }

@@ -33,6 +33,10 @@ import Profile from './Profile'
 import UpdateProfile from './UpdateProfile'
 import Confirmation from './Confirmation'
 import Orders from './Orders'
+import AdminUsersList from './Admin/AdminUsersList'
+import AdminNewslatter from './Admin/AdminNewslatter'
+import AdminContacts from './Admin/AdminContacts'
+import AdminSingleContact from './Admin/AdminSingleContact'
 
 export default function App() {
     return (
@@ -67,6 +71,10 @@ export default function App() {
                 <Route path='/admin-product' element={<AdminProduct/>}/>
                 <Route path='/admin-add-product' element={<AdminAddProduct/>}/>
                 <Route path='/admin-update-product/:id' element={<AdminUpdateProduct/>}/>
+                <Route path='/admin-user' element={<AdminUsersList/>}/>
+                <Route path='/admin-newslatter' element={<AdminNewslatter/>}/>
+                <Route path='/admin-contact' element={<AdminContacts/>}/>
+                <Route path='/admin-single-contact/:id' element={<AdminSingleContact/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

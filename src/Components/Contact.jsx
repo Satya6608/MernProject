@@ -19,7 +19,7 @@ export default function Contact() {
     }
     function postData(e) {
         e.preventDefault();
-        dispatch(addContact({...data}))
+        dispatch(addContact({...data,date:new Date(),status:"Active"}))
         var frm = document.getElementsByName('contact-form')[0];
         frm.reset();
         setShow(true)
