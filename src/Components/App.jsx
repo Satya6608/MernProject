@@ -37,6 +37,8 @@ import AdminUsersList from './Admin/AdminUsersList'
 import AdminNewslatter from './Admin/AdminNewslatter'
 import AdminContacts from './Admin/AdminContacts'
 import AdminSingleContact from './Admin/AdminSingleContact'
+import AdminCheckouts from './Admin/AdminCheckouts'
+import AdminSingleCheckout from './Admin/AdminSingleCheckout'
 
 export default function App() {
     return (
@@ -74,7 +76,9 @@ export default function App() {
                 <Route path='/admin-user' element={<AdminUsersList/>}/>
                 <Route path='/admin-newslatter' element={<AdminNewslatter/>}/>
                 <Route path='/admin-contact' element={<AdminContacts/>}/>
+                <Route path='/admin-checkout' element={<AdminCheckouts/>}/>
                 <Route path='/admin-single-contact/:id' element={<AdminSingleContact/>}/>
+                <Route path='/admin-single-checkout/:id' element={<AdminSingleCheckout/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

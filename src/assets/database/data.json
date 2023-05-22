@@ -302,6 +302,18 @@
       "qty": 0,
       "total": 0,
       "pic": "Test"
+    },
+    {
+      "userid": null,
+      "productid": 8,
+      "name": "Female Trouser Black",
+      "color": "Black",
+      "size": "32",
+      "price": 1328.7,
+      "qty": 1,
+      "total": 1328.7,
+      "pic": "p70.jpg",
+      "id": 1
     }
   ],
   "wishlist": [
@@ -365,7 +377,6 @@
     {
       "userid": "3",
       "paymentmode": "COD",
-      "paymentStatus": "Pending",
       "orderStatus": "Order Placed",
       "totalAmount": 2500,
       "shippingAmount": 0,
@@ -385,7 +396,8 @@
           "id": 1
         }
       ],
-      "id": 5
+      "id": 5,
+      "status": "Done"
     },
     {
       "userid": "1",
@@ -498,6 +510,31 @@
         }
       ],
       "id": 9
+    },
+    {
+      "userid": "3",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 2436,
+      "shippingAmount": 0,
+      "finalAmount": 2436,
+      "date": "2023-05-22T17:10:55.116Z",
+      "product": [
+        {
+          "userid": "3",
+          "productid": 5,
+          "name": "Kids Tshirt Mufti",
+          "color": "Blue",
+          "size": "SM",
+          "price": 2436,
+          "qty": 1,
+          "total": 2436,
+          "pic": "p59.jpg",
+          "id": 2
+        }
+      ],
+      "id": 10
     }
   ],
   "newslatter": [
