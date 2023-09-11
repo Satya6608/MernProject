@@ -274,7 +274,7 @@ export default function Shop() {
                                     </div>
                                 })
                             }
-                            <div className="col-12 pb-1">
+                            {/* <div className="col-12 pb-1">
                                 <nav aria-label="Page navigation">
                                     <ul className="pagination justify-content-center mb-3">
                                         <li className="page-item disabled">
@@ -294,7 +294,7 @@ export default function Shop() {
                                         </li>
                                     </ul>
                                 </nav>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     {/* <!-- Shop Product End --> */}

@@ -285,7 +285,7 @@
       "pin": "110099",
       "city": "Delhi",
       "state": "Delhi",
-      "pic": "p8.jpg",
+      "pic": "p2.jpg",
       "role": "User",
       "otp": ""
     }
@@ -305,14 +305,14 @@
     },
     {
       "userid": null,
-      "productid": 8,
-      "name": "Female Trouser Black",
+      "productid": 2,
+      "name": "Female Jeans Regular Fit Mufti",
       "color": "Black",
       "size": "32",
-      "price": 1328.7,
-      "qty": 1,
-      "total": 1328.7,
-      "pic": "p70.jpg",
+      "price": 3825,
+      "qty": 2,
+      "total": 7650,
+      "pic": "p12.jpg",
       "id": 1
     }
   ],
@@ -346,6 +346,16 @@
       "price": 2436,
       "pic": "p59.jpg",
       "id": 2
+    },
+    {
+      "userid": null,
+      "productid": 7,
+      "name": "Female Shirt White Zara",
+      "color": "White",
+      "size": "XL",
+      "price": 939,
+      "pic": "p9.jpg",
+      "id": 3
     }
   ],
   "checkout": [
@@ -535,6 +545,31 @@
         }
       ],
       "id": 10
+    },
+    {
+      "userid": "3",
+      "paymentmode": "NETBANKING",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 3420,
+      "shippingAmount": 0,
+      "finalAmount": 3420,
+      "date": "2023-08-31T08:12:01.477Z",
+      "product": [
+        {
+          "userid": "3",
+          "productid": 4,
+          "name": "Female Tshirt Adidas",
+          "color": "White",
+          "size": "M",
+          "price": 3420,
+          "qty": 1,
+          "total": 3420,
+          "pic": "p28.jpg",
+          "id": 2
+        }
+      ],
+      "id": 11
     }
   ],
   "newslatter": [
