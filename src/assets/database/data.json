@@ -288,6 +288,23 @@
       "pic": "p8.jpg",
       "role": "User",
       "otp": ""
+    },
+    {
+      "id": 4,
+      "name": "Satya Prakash",
+      "username": "Satya123",
+      "email": "satyaprakash6608@gmail.com",
+      "phone": "08076419914",
+      "password": "Satya@8076",
+      "addressline1": "226",
+      "addressline2": "gali no 3",
+      "addressline3": "mandawali",
+      "pin": "110092",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pic": "",
+      "role": "User",
+      "otp": ""
     }
   ],
   "cart": [
@@ -535,6 +552,56 @@
         }
       ],
       "id": 10
+    },
+    {
+      "userid": "4",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 3825,
+      "shippingAmount": 0,
+      "finalAmount": 3825,
+      "date": "2023-11-20T05:34:21.823Z",
+      "product": [
+        {
+          "userid": "4",
+          "productid": 2,
+          "name": "Female Jeans Regular Fit Mufti",
+          "color": "Black",
+          "size": "32",
+          "price": 3825,
+          "qty": 1,
+          "total": 3825,
+          "pic": "p12.jpg",
+          "id": 2
+        }
+      ],
+      "id": 11
+    },
+    {
+      "userid": "4",
+      "paymentmode": "COD",
+      "paymentStatus": "Pending",
+      "orderStatus": "Order Placed",
+      "totalAmount": 1328.7,
+      "shippingAmount": 0,
+      "finalAmount": 1328.7,
+      "date": "2023-11-20T05:35:16.406Z",
+      "product": [
+        {
+          "userid": "4",
+          "productid": 8,
+          "name": "Female Trouser Black",
+          "color": "Black",
+          "size": "32",
+          "price": 1328.7,
+          "qty": 1,
+          "total": 1328.7,
+          "pic": "p70.jpg",
+          "id": 2
+        }
+      ],
+      "id": 12
     }
   ],
   "newslatter": [
