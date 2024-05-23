@@ -1,0 +1,7 @@
+EMAILSENDER=karmadjango@gmail.com
+EMAILPASSWORD=ekcikkgxzrxehhkk
+JWT_KEY_ADMIN = mynameisnitinchauhanandiamatrainerinducatforfullstackdevelopmentADMIN
+JWT_KEY_USER = mynameisnitinchauhanandiamatrainerinducatforfullstackdevelopmentADMINUSER
+RPKEYID = rzp_test_kJFCr5jnzPYy9s
+RPSECRETKEY = cFR0T4bhyI16Xb06fFytJmAu
+DBKEY = mongodb://localhost:27017/myshop
